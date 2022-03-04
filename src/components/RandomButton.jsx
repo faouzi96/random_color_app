@@ -3,9 +3,9 @@ import styled from "styled-components"
 import { GiPerspectiveDiceSixFacesRandom } from "react-icons/gi"
 
 function RandomButton({ setLuncher }) {
-     const handleClick = React.useCallback(() => {
+     const handleClick = () => {
           setLuncher((c) => !c)
-     },[])
+     }
      return (
           <ButtonStyled onClick={handleClick} >
                <GiPerspectiveDiceSixFacesRandom size={70} />

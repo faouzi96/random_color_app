@@ -15,9 +15,9 @@ function OptionsBar({ stateColor, setStateColor }) {
      const { theme } = React.useContext(ThemeContext)
      const [copied, setCopeid] = React.useState(false)
 
-     const lockColor = React.useCallback(() => {
+     const lockColor = () => {
           setStateColor((state) => ({ ...state, isLocked: !state.isLocked }))
-     },[])
+     }
 
      const increment = () => {
           setStateColor((state) => ({
@@ -51,7 +51,7 @@ function OptionsBar({ stateColor, setStateColor }) {
                     />
                </ContainerIcons>
                <ContainerIcons>
-                    {stateColor.isBlocked ? (
+                    {stateColor.isLocked ? (
                          <MdLockOutline
                               onClick={lockColor}
                               size={35}
