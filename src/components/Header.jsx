@@ -21,7 +21,7 @@ function Header() {
                <ListLink>
                     <Li>
                          <Link
-                              href="#"
+                              href="https://github.com/faouzi96/random_color_app/"
                               title="Github repository"
                               isDark={theme === "dark"}
                          >
