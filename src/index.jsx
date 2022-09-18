@@ -2,29 +2,12 @@ import React from "react"
 import ReactDOM from "react-dom"
 import { ThemeContext } from "./utils/context"
 import ProviderTheme from "./utils/ProviderTheme"
-import { createGlobalStyle } from "styled-components"
 import "./style/index.css"
+import { Style } from "./indexStyle"
 import reportWebVitals from "./reportWebVitals"
 import Home from "./pages/Home"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
-
-// GLOBAL STYLE /////////////////
-
-const Style = createGlobalStyle`
-    * {
-     border-color : ${({ isDark }) => (isDark ? "#ffffff50" : "#22222250")};
-    }
-    body {
-        background-color : ${({ isDark }) => (isDark ? "#222" : "#fff")};
-        color : ${({ isDark }) => (isDark ? "#ffffff" : "#222222")};
-        height: 100vh;
-        overflow : hidden;
-    }
-`
-
-///////////////////////////////////
-
 
 const GlobalStyle = () => {
      const { theme } = React.useContext(ThemeContext)
